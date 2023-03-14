@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".authentication.SignFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/openSignPageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_h_l"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/padding_3xlarge"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_login"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/padding_xsmall"
+                    android:layout_toStartOf="@+id/openLoginPageBtn"
+                    android:background="@android:color/transparent"
+                    android:text="Already have an account?"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_standard" />
+
+                <TextView
+                    android:id="@+id/openLoginPageBtn"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="Login"
+                    android:textAlignment="gravity"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAppSecond"
+                    android:textSize="@dimen/font_standard" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sign_up_name_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/openSignPageBtn"
+                android:layout_marginBottom="@dimen/padding_standard"
+                android:hint="Name"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusBottomStart="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopStart="@dimen/btn_radios_large"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_up_name_edt"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_h_l"
+                    android:backgroundTint="@color/colorGlass"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_standard"
+                    app:errorEnabled="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_phone_number_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sign_up_name_layout"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/padding_standard"
+                android:hint="Phone"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusBottomStart="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopStart="@dimen/btn_radios_large"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_up_phone_number_edt"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_h_l"
+                    android:backgroundTint="@color/colorGlass"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textNoSuggestions|number"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_standard"
+                    app:errorEnabled="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_email_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_phone_number_layout"
+                android:layout_marginBottom="@dimen/padding_standard"
+                android:hint="Email"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusBottomStart="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopStart="@dimen/btn_radios_large"
+                app:boxStrokeWidth="1dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_up_email_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_h_l"
+                    android:backgroundTint="@color/colorGlass"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textNoSuggestions|textEmailAddress"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_standard"
+                    app:errorEnabled="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sign_up_pass_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_email_layout"
+                android:layout_marginBottom="@dimen/padding_standard"
+                android:hint="Password"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusBottomStart="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopStart="@dimen/btn_radios_large"
+                app:boxStrokeWidth="1dp"
+                app:passwordToggleEnabled="true"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_up_password_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_h_l"
+                    android:backgroundTint="@color/colorGlass"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textNoSuggestions|textPassword"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_standard"
+                    app:errorEnabled="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sign_up_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_h_l"
+                android:layout_below="@+id/sign_up_pass_layout"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_standard"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:background="@drawable/auth_circle_primary"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="Signup"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font_large" />
+
+            <ProgressBar
+                android:id="@+id/upProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sign_up_pass_layout"
+                android:layout_centerHorizontal="true"
+                android:progressTint="@color/colorAppSecond" />
+
+            <TextView
+                android:id="@+id/terms_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sign_up_btn"
+                android:layout_gravity="start"
+                android:lineSpacingExtra="@dimen/padding_3xsmall"
+                android:linksClickable="true"
+                android:text="@string/terms"
+                android:textColor="@color/colorBlack"
+                android:textColorLink="@color/colorAppSecond"
+                app:autoSizeMaxTextSize="@dimen/font_large"
+                app:autoSizeMinTextSize="@dimen/font_2xsmall"
+                app:autoSizeStepGranularity="1sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/openSignUpPageBtn"
+        android:layout_width="wrap_content"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:layout_height="@dimen/btn_h_l"
+        android:gravity="bottom"
+        android:layout_marginBottom="@dimen/padding_3xlarge">
+
+        <TextView
+            android:id="@+id/txt_login"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/padding_xsmall"
+            android:layout_toStartOf="@+id/notmemeber"
+            android:background="@android:color/transparent"
+            android:text="No a Member?"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_standard" />
+
+        <TextView
+            android:id="@+id/notmemeber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true"
+            android:text="Signup"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAppSecond"
+            android:textSize="@dimen/font_standard" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Sign_in_name_layout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_standard"
+        android:hint="Username"
+        android:layout_below="@+id/openSignUpPageBtn"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusBottomEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusBottomStart="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopStart="@dimen/btn_radios_large">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Sign_in_name_edt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_h_l"
+            android:backgroundTint="@color/colorGlass"
+            android:focusableInTouchMode="true"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLines="1"
+            app:errorEnabled="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_standard" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Sign_in_pass_layout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_below="@+id/Sign_in_name_layout"
+        android:layout_marginBottom="@dimen/padding_standard"
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidth="1dp"
+                app:boxCornerRadiusBottomEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusBottomStart="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopEnd="@dimen/btn_radios_large"
+                app:boxCornerRadiusTopStart="@dimen/btn_radios_large">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Sign_in_password_edt"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_h_l"
+            android:backgroundTint="@color/colorGlass"
+            android:focusableInTouchMode="true"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:lines="1"
+            app:errorEnabled="true"
+            android:maxLines="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_standard" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Sign_in_btn"
+        android:background="@drawable/auth_circle_primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_h_l"
+        android:layout_below="@+id/Sign_in_pass_layout"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding_standard"
+        android:layout_marginBottom="@dimen/padding_xsmall"
+        android:gravity="center"
+        android:text="Login"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_large" />
+    <ProgressBar
+        android:id="@+id/inProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Sign_in_pass_layout"
+        android:layout_centerHorizontal="true"
+        android:progressTint="@color/colorAppSecond" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/forgotPassBtn"
+
+        android:layout_below="@+id/Sign_in_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@null"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:padding="@dimen/padding_2xsmall"
+        android:text="Forgot password?"
+        android:textColor="@color/colorAppSecond"
+        android:textSize="@dimen/font_standard" />
+
+</RelativeLayout>

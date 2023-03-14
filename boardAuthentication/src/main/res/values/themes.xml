@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.LearningApp" parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+<!--        <item name="boxStrokeColor">@color/border_input</item>-->
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/btn_radios_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/btn_radios_large</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/btn_radios_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/btn_radios_large</item>
+<!--        <item name="hintTextColor">@color/text_input</item>-->
+
+    </style>
+</resources>

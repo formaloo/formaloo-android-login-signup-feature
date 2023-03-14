@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/seclay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_pink_shadow"
+        android:gravity="center_vertical">
+
+
+
+        <RelativeLayout
+            android:id="@+id/sectionLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="@dimen/padding_small">
+
+            <include
+                android:id="@+id/field_ui_header"
+                layout="@layout/layout_ui_field_header" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>

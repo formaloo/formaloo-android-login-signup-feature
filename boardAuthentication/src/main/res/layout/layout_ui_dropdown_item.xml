@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/droplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="@dimen/padding_small">
+
+            <include
+                android:id="@+id/field_ui_header"
+                layout="@layout/layout_ui_field_header" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_value_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/field_ui_header"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/value_spinner"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/btn_h_l"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/err_lay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_value_lay">
+
+                <include
+                    android:id="@+id/field_ui_footer"
+                    layout="@layout/layout_ui_field_footer" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>

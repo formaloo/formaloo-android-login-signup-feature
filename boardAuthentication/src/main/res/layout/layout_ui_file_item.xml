@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_small"
+        android:gravity="center_vertical">
+
+
+
+        <RelativeLayout
+            android:id="@+id/fileLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <include
+                android:id="@+id/field_ui_header"
+                layout="@layout/layout_ui_field_header" />
+
+            <RelativeLayout
+                android:id="@+id/err_lay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/file_btn">
+
+                <include
+                    android:id="@+id/field_ui_footer"
+                    layout="@layout/layout_ui_field_footer" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/file_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/field_ui_header"
+                android:padding="@dimen/padding_xsmall">
+
+                <TextView
+                    android:id="@+id/key_txv"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Click to upload file"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/padding_small"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/font_large" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/file_data_lay"
+                    android:layout_margin="@dimen/padding_small"
+                    android:visibility="gone"
+                    android:layout_below="@+id/key_txv"
+                    android:background="@color/gray_pink"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/padding_xsmall"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/desc_txv"
+
+                        android:layout_toStartOf="@+id/remove_file_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/font_standard" />
+                    <TextView
+                        android:id="@+id/file_txv"
+
+                        android:layout_below="@+id/desc_txv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/padding_xsmall"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/font_standard" />
+
+                    <ImageButton
+                        android:id="@+id/remove_file_btn"
+                        android:layout_width="@dimen/icon_size_standard"
+                        android:layout_height="@dimen/icon_size_standard"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="centerInside"
+                        android:src="?android:attr/closeIcon" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>

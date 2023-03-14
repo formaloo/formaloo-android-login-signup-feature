@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_form_ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/padding_small"
+        android:id="@id/ph"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_h_l">
+
+        <ImageButton
+            android:id="@+id/close_btn"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/padding_small"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_xsmall"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Profile"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_xlarge" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ph"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ui_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:padding="@dimen/padding_standard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/views_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_standard"
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="@dimen/padding_standard" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/from_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_h_l"
+                    android:layout_below="@+id/views_rec"
+                    android:layout_marginHorizontal="@dimen/padding_small"
+                    android:background="@drawable/auth_circle_primary"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:text="Save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_large"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/phoneProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/views_rec"
+                    android:layout_centerHorizontal="true"
+                    android:progressTint="@color/colorAppSecond" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
